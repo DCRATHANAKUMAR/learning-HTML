@@ -1,0 +1,144 @@
+#adArticleBoxTop,
+#adArticleBoxBottom {
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.modal {
+  overflow: hidden !important;
+  position: absolute;
+  min-width: 100px;
+  padding: 0 !important;
+  z-index: 10000; /* see TP-552 */
+}
+
+.cxd-modal .modal-body {
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-bottom: auto;
+}
+
+.modalIndent {
+  border-top: 1px solid #e5e5e5;
+  padding: 0 2em;
+}
+
+.modal-header {
+  text-align: center;
+  border-bottom: none;
+  padding: 15px 0 0 0;
+  flex: none;
+}
+
+#articleBoxT .modal-header {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+#articleBoxT .modalIndent {
+  border-top: none;
+}
+
+#articleBoxBodyT {
+  user-select: text;
+}
+
+.modalBtn {
+  border-color: rgba(0, 99, 220, 0.2);
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 3px 0;
+  color: rgba(0, 99, 220, 0.2);
+  height: 60px;
+  padding: 0;
+  margin: 10px;
+  width: 60px;
+}
+
+.modalBtn > svg {
+  margin-top: -3px;
+}
+
+#about .modal-dialog td:first-child svg {
+  max-height: 60px;
+  max-width: 60px;
+  width: 60px;
+  height: 60px;
+}
+
+.modal-dialog td svg {
+  height: 20px;
+  width: 20px;
+  margin: -5px;
+}
+
+.modal-content {
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
+}
+
+.modal-dialog {
+  height: calc(100% - 60px);
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-dialog.fullSize {
+  height: calc(100% - 20px);
+  margin: 10px;
+  width: auto;
+}
+
+.modal-dialog.fullSize .modalIndent {
+  flex: 1 1 10000px;
+  padding: 0;
+  margin: 0 2em;
+}
+
+.imageDetail {
+  position: absolute; 
+  height: 100%;
+  width: 100%; 
+  text-align: center;
+  user-select: none;
+}
+
+.imageDetailContent {
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  pointer-events: none;
+}
+
+.modal-footer {
+  padding: 15px 0px;
+  flex: none;
+}
+
+.adPlaceholder {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+#buildinfo {
+  margin-top: 1em;
+  margin-bottom: 2em;
+  font-size: 1em;
+  text-align: center;
+}
+
+#linkCredits {
+  cursor: pointer;
+}
+
+#creditsText pre {
+  word-wrap: normal;
+  word-break: keep-all;
+}

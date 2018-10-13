@@ -1,0 +1,310 @@
+#searchpanel > div {
+  padding: 5px;
+}
+
+#searchInputContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 38px;
+  min-height: 38px;
+  padding: 0 !important;
+}
+
+#searchInputWithClearBtn {
+  flex-grow: 1;
+}
+
+#searchInput {
+  width: 100%;
+  height: 100%;
+  text-indent: 5px;
+  outline: none;
+  border-radius: 0;
+  padding-right: 30px;
+}
+
+#searchInput::-ms-clear {
+  display: none;
+}
+
+#searchInput[disabled="disabled"] {
+  border-color: #ccc;
+}
+
+#searchBtn {
+  height: 100%;
+  width: 38px;
+  background-image: url("../img/search.svg");
+  background-repeat: no-repeat;
+  background-position: 6px 6px;
+  background-size: 24px;
+  background-color: #ccc;
+}
+
+#searchBtn.enabled {
+  background-color: rgba(0, 99, 220, 0.4);
+  cursor: pointer;
+}
+
+.defaultSearchPanel #searchBtn {
+  cursor: pointer;
+}
+
+.defaultSearchPanel #srLabel {
+  color: black;
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.defaultSearchPanel #searchTooShortLabel {
+  font-size: 14px;
+}
+
+#btnClearSearchInput {
+  position: relative;
+  width: 38px;
+  height: 38px;
+  top: -38px;
+  margin-left: auto;
+  padding: 5px;
+  cursor: pointer;
+}
+
+#btnClearSearchInput > svg {
+  height: 28px;
+  width: 28px;
+  fill: black;
+}
+
+#searchInputWithClearBtn {
+  height: 100%;
+}
+
+.no-touch #searchBtn.enabled:hover,
+.touch #searchBtn.enabled:active,
+.touch #searchBtn.enabled.active {
+  background-image: url("../img/search_white.svg");
+  background-color: rgba(0, 99, 220, 0.8);
+}
+
+#srLabel,
+#searchTooShortLabel,
+#searchErrorLabel {
+  min-height: 40px;
+  padding-left: 9px !important;
+  font-size: 12px;
+  color: #999;
+}
+
+#srLabel[hasResults="true"] {
+  border-bottom: 2px solid #ccc;
+}
+
+#searchInProgress {
+  margin: 15px auto 0 auto;
+  text-align: center;
+}
+
+.defaultSearchPanel #searchInProgress > .spinner#searchInProgress > .spinner {
+  display: none;
+}
+
+#searchInProgress > .spinner {
+  margin-bottom: 15px;
+}
+
+#btnAbortSearch {
+  margin-top: 15px;
+}
+
+.searchResultPage,
+.searchResultArticle {
+  padding: 3px;
+}
+
+.searchResultArticle .articleTitle {
+  word-wrap: break-word;
+}
+
+.searchResultServer .matchingText {
+  padding-bottom: 5px;
+  font-size: 11px;
+  word-break: break-word;
+}
+
+.no-touch .resultPageThumbContainer:hover .pageLabel,
+.touch .resultPageThumbContainer:active .pageLabel,
+.touch .resultPageThumbContainer.active .pageLabel {
+  background-color: rgba(0, 99, 220, 0.8);
+}
+
+.no-touch .resultPageThumbContainer:hover,
+.touch .resultPageThumbContainer:active,
+.touch .resultPageThumbContainer.active {
+  border-color: rgba(0, 99, 220, 0.8);
+}
+
+.moreResultsBtn,
+.lessResultsBtn {
+  padding: 3px 5px;
+  border-radius: 3px;
+  background: rgba(0, 99, 220, 0.4);
+  cursor: pointer;
+}
+
+#btnAbortSearch {
+  padding: 3px 5px;
+  border-radius: 3px;
+  font-size: 13px;
+  background-color: #ccc;
+}
+
+#btnAbortSearch.enabled {
+  background: rgba(0, 99, 220, 0.4);
+  cursor: pointer;
+}
+
+.lessResultsBtn,
+.moreResultsBtn {
+  font-size: 11px;
+}
+
+.no-touch #btnAbortSearch.enabled:hover,
+.touch #btnAbortSearch.enabled:active,
+.touch #btnAbortSearch.enabled.active,
+.no-touch .moreResultsBtn:hover,
+.touch .moreResultsBtn:active,
+.touch .moreResultsBtn.active,
+.no-touch .lessResultsBtn:hover,
+.touch .lessResultsBtn:active,
+.touch .lessResultsBtn.active {
+  background-color: rgba(0, 99, 220, 0.8);
+  color: white;
+}
+
+#searchpanel .resultInfo .matchingText > mark {
+  background-color: #ff0;
+  padding: 0;
+}
+
+#searchResults {
+  overflow-x: hidden;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+#searchCounter,
+#searchpanel .resultPageNo {
+  font-weight: bold;
+}
+
+.searchResult {
+  border: 5px solid transparent;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.no-touch .searchResult:hover,
+.touch .searchResult:active,
+.touch .searchResult.active {
+  border: 5px solid rgba(0, 99, 220, 0.8);
+}
+
+.searchResultServer {
+  display: flex;
+  margin: 10px 0;
+}
+
+.resultPageThumbContainer {
+  position: relative;
+  display: inline-block;
+  width: 50%;
+  margin-bottom: auto;
+  border: 5px solid #dfdfdf;
+  background-color: white;
+  cursor: pointer;
+}
+
+.resultPageThumbContainer.left {
+  width: 25%;
+  margin-right: 25%;
+}
+
+.resultPageThumbContainer.right {
+  width: 25%;
+  margin-left: 25%;
+}
+
+.currentPage .resultPageThumbContainer {
+  border-color: rgba(0, 99, 220, 0.4);
+}
+
+.resultPageThumbContainer > img {
+  height: 100%;
+}
+
+.resultInfo {
+  width: 50%;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.currentPage .resultPageNo {
+  color: rgba(0, 99, 220, 0.7);
+}
+
+.searchResultLayer {
+  position: absolute;
+  background-color: rgba(255, 255, 0, 0.4);
+  pointer-events: none;
+}
+
+.resultPublication {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.resultPublication:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.searchResultPubHeader {
+  display: flex;
+  border-bottom: 2px solid #cccccc;
+}
+
+.searchResultPubIcon {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  margin: auto 0;
+}
+
+.searchResultPubIcon > svg {
+  width: 40px;
+  height: 40px;
+  fill: #888;
+  margin-top: -3px;
+}
+
+.searchResultPubInfo {
+  word-break: break-word;
+}
+
+.currentPublication .searchResultPubIcon > svg {
+  fill: rgb(0, 99, 220);
+}
+
+.searchResultPubTitle {
+  font-weight: bold;
+}
+
+.searchResultPubNumResults {
+  color: #999;
+  font-size: 11px;
+}
+
+.resultPublication:not(.currentPublication) .currentPubMark {
+  display: none;
+}

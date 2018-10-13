@@ -1,0 +1,82 @@
+header {
+  overflow: hidden;
+  height: 60px;
+  z-index: 99;
+}
+
+.container-fluid {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.navbar-collapse.collapsing {
+  transition: height 0.01s;
+}
+
+#canvas {
+  position: fixed;
+  width: 100%;
+  height: calc(100vh - 60px);
+  margin: 0;
+}
+
+body[search-visible="true"][orientation="landscape"] #canvas,
+body[thumbs-visible="true"][orientation="landscape"] #canvas,
+body[pubFilter-visible="true"][orientation="landscape"] #canvas {
+  width: 100%;
+}
+
+/* PageJumper */
+
+.pagejumper {
+  height: 100%;
+  width: 100px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -50px;
+  text-align: center;
+}
+
+.pagejumper input {
+  box-shadow: none;
+  background-color: #cccccc;
+  border-radius: 4px;
+  border: medium none;
+  min-width: inherit;
+  width: 100%;
+  margin: 11px 4px;
+  padding: 9px;
+  box-shadow: 0 0 5px #4d4d4d inset;
+  text-align: center;
+}
+
+/* Logo */
+
+#logo {
+  position: absolute;
+  height: 54px;
+  width: auto;
+  margin-top: 3px;
+}
+
+#logo.clickable {
+  cursor: pointer;
+}
+
+/* Buttons */
+
+#btn_mainmenu {
+  width: 60px;
+  height: 60px;
+  padding: 19px;
+  border-radius: 0;
+  border-color: transparent;
+  background-color: transparent;
+  margin: 0;
+}
+
+.no-touch #btn_mainmenu:hover,
+.touch #btn_mainmenu:active {
+  background-color: rgba(0, 99, 220, 0.2);
+}

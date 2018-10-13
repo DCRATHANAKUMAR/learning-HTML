@@ -1,0 +1,22 @@
+#loadingMask {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  z-index: 2500;
+  flex-direction: column;
+}
+
+#headerLoadingMask {
+  height: 60px;
+}
+
+#bodyLoadingMask {
+  flex-grow: 1;
+  background-color: white;
+  display: flex;
+}
+
+#loadingProgress {
+  margin: auto;
+}

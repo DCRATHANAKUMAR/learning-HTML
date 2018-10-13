@@ -1,0 +1,133 @@
+#pagegallery {
+  position: relative;
+  left: 0;
+  top: 0;
+  height: 6px;
+  width: 100%;
+  z-index: 1045;
+  background-color: rgba(128, 128, 128, 0.5);
+  border-bottom: 1px solid rgb(0, 99, 220);
+  overflow: hidden;
+}
+
+#pagegallery .wheely,
+#pagegallery .pageno {
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+}
+
+#pagegallery .wheely[visible='false'] {
+  opacity: 0;
+}
+
+#pagegallery .pageno.current,
+#pagegallery .wheely[visible='true'],
+.no-touch #pagegallery .pageno:hover,
+.touch #pagegallery .pageno:active {
+  width: 100px !important;
+}
+
+#pagegallery .wheely label,
+#pagegallery .pageno label {
+  color: #ffffff;
+  cursor: pointer;
+  font-family: "Open Sans Light",sans-serif;
+  font-size: 14px;
+  line-height: 30px;
+  opacity: 0;
+  text-align: center;
+}
+
+#pagegallery .pageno.current label,
+.no-touch #pagegallery:hover .wheely label,
+.no-touch #pagegallery:hover .pageno:hover label,
+.touch #pagegallery:active .wheely label,
+.touch #pagegallery .pageno:active label {
+  opacity: 1;
+  background: rgba(0,99,220, 0.6);
+  width: 100px !important;
+}
+
+#pagegallery .pageno.current {
+  z-index: -10;
+}
+
+.pgtooltip {
+  margin: 12px;
+  display: inline-block;
+  position: relative;
+}
+
+.pgtooltip div {
+  padding: 9px;
+  position: relative;
+}
+
+.no-touch #pagegallery:hover,
+.touch #pagegallery:active {
+  height: 30px;
+  background: rgba(0,99,220, 0.3);
+  overflow: unset;
+}
+
+.galleryImage {
+  height: auto;
+  width: 100px;
+}
+
+#pagegallery .tooltip::before {
+  background: #ffffff none repeat scroll 0 0;
+  left: 50%;
+  margin-left: -9px;
+  top: 0;
+}
+
+.pgtooltip::before {
+  content: " ";
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 30%;
+  margin-top: -50px;
+  left: 35px;
+  transform: rotate(45deg);
+  z-index: -1;
+}
+
+.pgtooltip,
+.pgtooltip::before {
+  box-shadow: 0 0 9px 0 #4d4d4d;
+}
+
+.pgtooltip,
+.pgtooltip div,
+.pgtooltip::before {
+  background-color: #ffffc7;
+}
+
+#pagegallery .pgtooltip[visible="true"] {
+  opacity: 1;
+  z-index: 2000;
+}
+
+#pagegallery .pgtooltip {
+  background: #ffffff none repeat scroll 0 0;
+  opacity: 0;
+  position: absolute;
+  top: 28px;
+  margin-right: 0;
+  margin-left: 0;
+  z-index: 1;
+}
+
+.pgtooltip,
+.pgtooltip::before {
+  box-shadow: 0 0 9px 0 #4d4d4d;
+}
+
+.pgtooltip {
+  display: inline-block;
+  margin: 12px;
+  position: relative;
+}

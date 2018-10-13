@@ -1,0 +1,121 @@
+/* common */
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f8f8;
+}
+
+.navbar {
+  height: 60px;
+  box-sizing: content-box;
+}
+
+.toolbar .nav > li {
+  display: inline-block;
+  padding: 2px 0;
+}
+
+.toolbar button {
+  height: 56px;
+}
+
+.toolbar button > svg {
+  height: 45px;
+}
+
+.toolbar button > div {
+  margin-top: -10px;
+  font-size: 9px;
+  line-height: 15px;
+  margin-bottom: 2px;
+  padding: 0 2px;
+}
+
+.zoomFactor {
+  position: absolute;
+  height: 45px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  font-size: 10px;
+  line-height: 45px;
+}
+
+.zoomSliderPanel {
+  position: absolute;
+  padding: 10px;
+  margin-top: 7px;
+  left: calc(50% - 86px);
+  border-radius: 10px;
+  background-color: #cccccc;
+  border: 1px solid gray;
+  opacity: 0.9;
+  display: flex;
+  z-index: 1;
+}
+
+.zoomSliderPanel .zoomSlider {
+  width: 100px;
+  margin: 0 5px;
+}
+
+.menuItemSeperator {
+  height: 56px;
+  margin: 2px;
+  width: 2px;
+  background-color: #cccccc;
+}
+
+/* modal dialog */
+
+.modal-headline {
+  background-color: #f8f8f8;
+  margin: 15px 0 0 0;
+  border-color: #e7e7e7;
+  border-width: 1px 0;
+  border-style: solid;
+  text-align: center;
+  display: flex;
+}
+
+.modal-headline > h2 {
+  flex-grow: 1;
+  margin-top: 13px;
+  margin-bottom: 13px;
+  padding-left: 62px;
+}
+
+.modal-headline > .toolbar {
+  padding-right: 2px;
+}
+
+#articleBoxDialog .modal-headline {
+  display: block;
+  margin: 0;
+  border-top: none;
+}
+
+#articleBoxDialog .toolbar {
+  float: right;
+}
+
+/* Social Sharing Buttons */
+
+#articleBoxDialog .jssocials {
+  float: left;
+}
+
+.jssocials > .jssocials-shares {
+  margin: 15px;
+}
+
+.jssocials .jssocials-share {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.jssocials .jssocials-share-link {
+  border-radius: 50%;
+}

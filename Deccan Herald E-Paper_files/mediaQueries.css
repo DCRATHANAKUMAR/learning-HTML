@@ -1,0 +1,217 @@
+/** Increasing menu bar breakpoint to 1080px. */
+@media (max-width: 1080px) {
+  .navbar-header {
+    float: none;
+  }
+
+  .navbar-right {
+    float: none !important;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-collapse {
+    border-top: 1px solid transparent;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+
+  .navbar-fixed-top {
+    top: 0;
+    border-width: 0 0 1px;
+  }
+
+  .navbar-collapse.collapse {
+    display: none !important;
+  }
+
+  header .navbar-nav {
+    float: none !important;
+    margin: 5px 0;
+  }
+
+  .collapse.in {
+    display: block !important;
+  }
+
+  .navbar > .container-fluid,
+  .navbar > .container-fluid > .navbar-header {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  #mainmenu {
+    max-height: 70px;
+    overflow: visible;
+  }
+
+  #logo {
+    margin-left: 2px;
+  }
+}
+
+@media (max-width: 768px) {
+  .modal-dialog {
+    height: calc(100% - 20px);
+  }
+
+  .modal-dialog h2 {
+    margin: 7px 0 0 0 !important;
+  }
+ 
+  .modal-header {
+    padding: 10px 0 0 0;
+  }
+
+  .modal-footer {
+    padding: 10px 0;
+  }
+
+  .menuItemSeperator {
+    visibility: collapse;
+    display: none !important;
+  }
+
+  #articleBoxT .modal-header {
+    padding-bottom: 10px;
+  }
+  
+  .toolbar {
+    margin: 0;
+  }
+
+  #articleBoxSocials > .jssocials-shares {
+    margin: 10px;
+  }
+
+  #btn_mainmenu {
+    width: 40px;
+    height: 100%;
+    padding: 13px 10px;
+  }
+
+  .toolbar,
+  #mainmenu {
+    max-height: 50px;
+  }
+
+  .toolbar li > button > div {
+    display: none;
+  }
+
+  #logo img{
+    height: 34px !important;
+  }
+
+  .pagejumper input {
+    padding: 0;
+    margin: 8px 4px;
+    box-shadow: 0 0 5px #4d4d4d inset;
+    border: 1px solid black;
+  }
+
+  header,
+  body .toolbar button,
+  .navbar,
+  .navbar-header,
+  #headerLoadingMask {
+    height: 40px !important;
+  }
+
+  .navbar {
+    border-width: 0;
+  }
+
+  #canvas {
+    height: calc(100vh - 40px);
+  }
+
+  .mobile body[orientation="portrait"] #btn-prev,
+  .mobile body[orientation="portrait"] #btn-next {
+    height: 0;
+    width: 0;
+    min-height: 0;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    visibility: collapse;
+  }
+
+  header > .navbar {
+    min-height: 0;
+    margin-bottom: 0;
+  }
+
+  .modalBtn {
+    margin: 5px;
+    height: 40px;
+    width: 40px;
+  }
+
+  button {
+    background: transparent;
+  }
+
+  button svg,
+  body .toolbar button > svg,
+  #thumbsToolbar button,
+  #thumbsToolbar button > svg {
+    height: 40px;
+    width: 40px;
+  }
+
+  .toolbar .zoomFactor {
+    line-height: 40px;
+  }
+
+  #searchpanel,
+  #thumbspanel,
+  #publicationFilterPanel {
+    height: calc(100% - 41px);
+    top: 41px;
+  }
+
+  .zoomFactor {
+    height: 40px;
+    line-height: 40px;
+  }
+
+  .zoomSliderPanel {
+    top: 100%;
+  }
+
+  .modal-headline .zoomSliderPanel {
+    left: calc(50% - 121px);
+  }
+
+  .modal-headline .navbar-nav {
+    margin: 2px;
+  }
+}
+
+@media (max-width: 480px) {
+  .thumbTitle {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 380px) {
+  .thumbTitle {
+    font-size: 8px;
+  }
+
+  header .zoomSliderPanel {
+    left: calc(50% - 66px);
+  }
+
+  .zoomSlider {
+    width: 70px;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+}

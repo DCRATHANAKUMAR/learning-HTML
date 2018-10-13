@@ -1,0 +1,49 @@
+.toast {
+  position: absolute;
+  width: 100%;
+  bottom: 35px;
+  text-align: center;
+  transition: opacity 0.1s ease-out;
+  pointer-events: none;
+  z-index: 30000;
+}
+
+#keyboardHelpToast {
+  bottom: 0;
+  text-align: right;
+}
+
+#keyboardHelpToast > .toastContent {
+  padding: 0;
+  border-radius: 0;
+  border-top-left-radius: 5px;
+  margin-right: 0;
+  vertical-align: bottom;
+}
+
+.toastContent {
+  display: inline-block;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: #cccccc;
+  margin: 0 10px;
+  border: 1px solid gray;
+  opacity: 0.9;
+}
+
+.toastHelpItem {
+  display: flex;
+}
+
+.toastHelpItem > svg {
+  width: 45px;
+  height: 45px;
+}
+
+.toastHelpItem > div {
+  display: inline-block;
+  max-width: 210px;
+  margin: auto 10px auto 0;
+  text-align: left;
+  font-size: 11px;
+}

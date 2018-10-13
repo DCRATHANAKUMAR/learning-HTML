@@ -1,0 +1,26 @@
+body {
+	background-color: blue;
+}
+.header {
+	background-color: red;
+	font-size: 50px;
+	color: white;
+}
+.header1 {
+	background-color: pink;
+	font-size: 50px;
+	color: white;
+}
+.header2 {
+	background-color: green;
+	font-size: 50px;
+	color: white;
+}
+h2{
+	font-family: 'Charmonman', cursive;
+
+}
+
+.size {
+	font-size: 40px;
+}

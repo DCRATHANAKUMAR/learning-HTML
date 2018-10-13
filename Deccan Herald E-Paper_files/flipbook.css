@@ -1,0 +1,214 @@
+/* Flipbook Area */
+
+#maindiv,
+#twrap,
+#t {
+  width: 100%;
+  height: 100%;
+}
+
+body[thumbs-visible="false"] #maindiv,
+body[search-visible="false"] #maindiv {
+  padding-left: 0;
+}
+
+#flipbookcontainer {
+  height: 100%;
+}
+
+/* Panzoom */
+
+.panzoom {
+  -webkit-backface-visibility: initial !important;
+  -webkit-transform-origin: 50% 50%;
+}
+
+/* Flipbook Pages */
+
+.book {
+  margin: 0 auto;
+  overflow: unset !important; /* because prev/next btn  */
+  user-select: none;
+}
+
+.book .page {
+  height: 100%;
+  background: #f4f4f4;
+  box-sizing: border-box;
+}
+
+.book .page img {
+  max-width: 100%;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+
+.page {
+  color: #000000;
+  background-size: 99% 99%;  
+  background: no-repeat center;
+}
+
+.imageLayer {
+  background-color: white;
+}
+
+body[display="double"] .even.own-ratio {
+  border-left: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+body[display="double"] .odd.own-ratio {
+  border-right: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+/* Prev/Next Buttons */
+
+#btn-prev,
+#btn-next {
+  background-color: transparent;
+  box-shadow: none;
+  height: 60px;
+  width: 35px;
+  z-index: 30;
+  padding-left: 5px;
+  padding-right: 0;
+  margin-top: -30px;
+  position: absolute;
+  top: 50%;
+}
+
+#btn-prev {
+    left: -40px;
+    margin-left: 5px;
+}
+
+#btn-next {
+  margin-right: 5px;
+}
+
+#btn-prev svg,
+#btn-next svg {
+  height: 60px;
+  width: 30px;
+  margin: 0;
+  fill: rgba(0, 99, 220, 0.2);
+}
+
+.no-touch #btn-prev svg,
+.no-touch #btn-next svg {
+  transition: fill 0.1s ease-out 0s;
+}
+
+.no-touch #btn-prev:hover svg,
+.no-touch #btn-next:hover svg,
+.touch #btn-prev:active svg,
+.touch #btn-next:active svg,
+.touch #btn-prev.active svg,
+.touch #btn-next.active svg {
+  fill: rgba(0, 99, 220, 0.8);
+}
+
+/* Article Marker */
+
+.no-touch body[article-marks="false"] .article:hover,
+.touch body[article-marks="false"] .article:active,
+body[article-marks="true"] .article {
+  opacity: 1;
+}
+
+body[article-marks="false"] .article {
+  opacity: 0;
+}
+
+.article {
+  position: absolute;
+  background-color: rgba(0, 99, 220, 0.2);
+  cursor: pointer;
+}
+
+.no-touch .article:hover,
+.touch .article:active {
+  background-color: rgba(0, 99, 220, 0.5);
+}
+
+.no-touch .article:hover:after,
+.touch .article:active:after {
+  opacity: 1;
+}
+
+.article:after {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background-image: url(../img/lens.svg);
+  background-position: 20px 20px;
+  background-repeat: no-repeat;
+}
+
+.article-corner {
+  position: absolute;
+  stroke: rgb(0, 99, 220);
+  stroke-width: 3px;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.article-corner.x2 {
+  top: 0;
+  right: 0;
+}
+
+.article-corner.x3 {
+  left: 0;
+  bottom: 0;
+}
+
+.article-corner.x4 {
+  bottom: 0;
+  right: 0;
+}
+
+/* Ad Slots */
+
+.flipbookAd {
+  position: absolute;
+  z-index: 250;
+  display: flex;
+  justify-content: center;
+}
+
+#adFlipbookLeft,
+#adFlipbookRight {
+  top: 0;
+  bottom: 0;
+  margin: 0 20px;
+  flex-direction: column;
+}
+
+#adFlipbookRight {
+  right: 0;
+}
+
+#adFlipbookTop {
+  margin: 10px 0;
+  left: 0;
+  right: 0;
+}
+
+/* Page Image Loading Animation */
+.pageLoadingAnimation {
+  position: absolute;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}

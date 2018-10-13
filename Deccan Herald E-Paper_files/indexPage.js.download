@@ -1,0 +1,18 @@
+/**
+ * Main entry point of CX epaper.
+ */
+var cxdClasses = cxdClasses || {};
+var cxdCmp = cxdCmp || {};
+
+(function () {
+
+  /**
+   * The main entry point of CX epaper. This method will be called once the document is ready.
+   */
+  function init () {
+    cxdCmp.turnPag = new cxdClasses.TurnPag();
+    cxdCmp.turnPag.init();
+  }
+
+  $(document).ready(init);
+}());

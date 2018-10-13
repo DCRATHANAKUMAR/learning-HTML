@@ -1,0 +1,37 @@
+/* 
+The css rules in this file will override the default styling of CX epaper.
+Generally, every style in CX epaper may be altered to your desires. 
+However, this document only provides the most common cases of styling adaptations (usually color changes).
+Otherwise, we would have to document every single part of the master.css in the src/css folder.
+If a certain styling parameter isn't covered in this document, please consult the master.css file or ask a person with css experience for help.
+
+NOTICE: Since the html structure and dynamic behavior of CX epaper may change rapidly from version to version, it might be necessary to update your
+        own styling when updating to a newer CX epaper version. No guarantee will be given that your own adaptions made on a previous version will still
+        overwrite the css rules in the master.css in a newer version. The custom.css file in lib.custom.TEMPLATE will be updated regularly. So, you should
+        do the same with your own custom.css in lib.custom or in any publication specific data folder.
+*/
+
+
+/*
+Basics
+*/
+#pubFilterProduct,
+#pubFilterContainer span:first-child {
+    display: none;
+}
+
+@media (min-width: 758px) {
+  .modal-dialog {
+    width: 560px;
+  }
+}
+
+/*
+uho: Width of the publication filter panel
+*/
+body[pubFilter-visible="true"] #publicationFilterPanel {
+  width: 200px !important;
+}
+
+
+

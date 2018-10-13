@@ -1,0 +1,19 @@
+#pubFilterContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+#pubFilterContainer > span {
+  color: #999;
+}
+
+#pubFilterContainer > select {
+  height: 30px;
+  width: 100%;
+  margin-bottom: 13px;
+}
+
+.promptOption {
+  color: #999;
+}

@@ -1,0 +1,32 @@
+.spinner > div {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  border-radius: 100%;
+  background-color: rgba(0, 99, 220, 0.4);
+  animation: bouncedelay 1.2s infinite ease-in-out both;
+}
+
+.spinner .spinnerItem1 {
+  animation-delay: -0.60s;
+}
+
+.spinner .spinnerItem2 {
+  animation-delay: -0.40s;
+}
+
+.spinner .spinnerItem3 {
+  animation-delay: -0.20s;
+}
+
+@keyframes bouncedelay {
+  0%, 80%, 100% { 
+    transform: scale(0);
+    opacity: 0;
+  }
+  40% { 
+    transform: scale(1.0);
+    opacity: 1;
+  }
+}
